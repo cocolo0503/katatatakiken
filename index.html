@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>肩叩き券</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>残り</h1>
-  <p>3回</p>
+  <h1>肩叩き券</h1>
+  <p>残り <span id="count">3</span> 回</p>
+  <button onclick="useTicket()">使う</button>
+
+  <script>
+    let count = 3;
+
+    function useTicket() {
+      if (count > 0) {
+        count--;
+        document.getElementById("count").textContent = count;
+      } else {
+        alert("もう使い切りました！");
+      }
+    }
+  </script>
 </body>
 </html>
