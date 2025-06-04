@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>肩叩き券</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>設定</h1>
+  <p>残り <span id="count">3</span> 回</p>
+  <button onclick="useTicket()">リセット</button>
+
+  <script>
+    let count = 3;
+
+    function useTicket() {
+        count = 3;
+        document.getElementById("count").textContent = count;
+    }
+  </script>
+</body>
+</html>
